@@ -9,10 +9,10 @@
 
 .sidebar {
   flex-shrink: 0;
+  width: 200px;
   padding-left: 30px;
   border-left: 4px solid #000;
   padding-top: 20px;
-  width: 200px;
 }
 
 .content {
@@ -20,7 +20,19 @@
   padding-top: 20px;
 }
 
-/* Mobile styles */
+@media (min-width: 769px) {
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 80px;
+    height: 400px;
+  }
+
+  .content {
+    margin-left: 260px;
+  }
+}
+
 @media (max-width: 768px) {
   .App {
     padding: 30px 20px;
@@ -41,7 +53,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    bottom: -30vh;
+    bottom: -40vh;
     width: 4px;
     background: #000;
   }

@@ -1,0 +1,40 @@
+- title: "StockBot"
+  description: |
+    StockBot provides users with real-time stock market dashboards generated from natural language queries. It leverages GPT to write API queries and define the dashboard layout, allowing users to modify and save their personalized financial views using simple text instructions.
+  tech: ["OpenAI", "Typescript", "Prompt Engineering", "MUI", "React"]
+  image: "/images/stockbot.png"
+  link: "https://stockbot.site/"
+
+- title: "Visualising the News"
+  description: |
+    The sheer volume of news these days makes it very hard to make sense of the world around us. To help with this, I co-developed Big Tech Visualisation. This app presents a graph of the tech industry derived from WikiData and populates it with current stories related to each node. 
+    
+    Articles are analysed with NLP and the areas they effect can be identified in real time. Multiple sources are scraped for articles, keeping the visualisation up to date and unbiased. See the demo presented by my team mate Jonas in the video that comes up on click.
+  tech: ["React", "PyTorch", "AlenNLP", "Neo4j", "Cypher", "Docker"]
+  image: "/images/news.png"
+  link: "https://www.youtube.com/watch?v=hM1BTkoR0aI"
+
+- title: "eve-cli"
+  description: |
+    Meet eve, your personal AI development assistant. She is an OpenAI-backed command line interface implemented in Rust.
+
+    She is designed to be resilient to improper input with careful code design and strong error management. See the github repo for the demo.
+  tech: ["Rust", "OpenAI", "Prompt Engineering", "Clap", "Cargo"]
+  image: "/images/eve.png"
+  link: "https://github.com/ted-jenks/eve-cli"
+
+- title: "whirl"
+  description: |
+    Whirl is a basic logging library for Haskell. I took on this project to teach myself the basics of Haskell and experience setting up a full library in the language.
+
+    It supports asynchronous logging functionality at different levels.
+  tech: ["Haskell", "Functional", "Library", "Stack", "Cabal"]
+  image: "/images/whirl.png"
+  link: "https://github.com/ted-jenks/whirl"
+
+- title: "Motshi"
+  description: |
+    Motshi is a blockchain-based solution for digital proof-of-age that offers users digitised identity with unparalleled security, privacy, and integrity. It is designed to be compliant with UK GDPR and handles storage of identification certificates on the Ethereum network, leaving users in complete control of their data.
+  tech: ["React-Native", "Solidity", "TensorFlow", "Truffle", "Express"]
+  image: "/images/motshi.jpg"
+  link: "https://motshi.com/"
