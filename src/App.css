@@ -1,0 +1,53 @@
+.App {
+  min-height: 100vh;
+  background: #fff;
+  color: #000;
+  padding: 60px 80px;
+  display: flex;
+  gap: 60px;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  padding-left: 30px;
+  border-left: 4px solid #000;
+  padding-top: 20px;
+  width: 200px;
+}
+
+.content {
+  flex: 1;
+  padding-top: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .App {
+    padding: 30px 20px;
+    gap: 40px;
+    display: block;
+    position: relative;
+  }
+
+  .sidebar {
+    padding-left: 20px;
+    padding-top: 10px;
+    position: relative;
+    border-left: none;
+  }
+
+  .sidebar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -30vh;
+    width: 4px;
+    background: #000;
+  }
+
+  .content {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+}

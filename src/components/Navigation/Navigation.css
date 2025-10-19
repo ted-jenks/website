@@ -1,0 +1,57 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #000;
+  letter-spacing: 0.02em;
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-item.active {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+.nav-item:not(.active):hover {
+  font-size: 1.2rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navigation {
+
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+    padding: 5px 0;
+  }
+
+  .nav-item::before {
+    display: none;
+  }
+
+  .nav-item.active {
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+
+  .nav-item:not(.active):hover {
+    font-size: 1rem;
+  }
+}
