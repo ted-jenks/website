@@ -1,0 +1,64 @@
+.home-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.hero-block {
+  padding: 40px;
+  max-width: 800px;
+}
+
+.hero-name {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: #000;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hero-name:hover {
+  transform: scale(1.02);
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hero-title:hover {
+  transform: scale(1.02);
+}
+
+.hero-philosophy {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hero-philosophy:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 3rem;
+  }
+  .hero-title {
+    font-size: 1rem;
+  }
+  .hero-block {
+    padding: 20px;
+  }
+}
