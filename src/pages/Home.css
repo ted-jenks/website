@@ -82,7 +82,6 @@
 
 .about-content a:hover {
   transform: scale(1.025);
-
 }
 
 @media (max-width: 768px) {
@@ -97,5 +96,8 @@
   }
   .about-section {
     padding: 20px;
+  }
+  .about-content {
+    text-align: left;
   }
 }
