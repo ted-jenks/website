@@ -3,7 +3,7 @@
     StockBot provides users with real-time stock market dashboards generated from natural language queries. It leverages GPT to write API queries and define the dashboard layout, allowing users to modify and save their personalized financial views using simple text instructions.
   tech: ["LLM", "Typescript", "React"]
   image: "/images/stockbot.png"
-  link: "https://stockbot.site/"
+  link: "https://github.com/ted-jenks/gpt-stock-analyser/blob/master/README.md"
 
 - title: "Visualising the News"
   description: |
