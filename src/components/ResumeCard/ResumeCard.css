@@ -1,0 +1,213 @@
+.resume-card-wrapper {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    /* Ensure particles fly over other elements on the page */
+    z-index: 10; 
+}
+
+.resume-card {
+  border: 4px solid #000;
+  background: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  /* IMPORTANT: Removed overflow: hidden so particles can fly out */
+  /* overflow: hidden; */ 
+  width: 100%;
+  user-select: none;
+  position: relative;
+  z-index: 1; /* Keep card background below particles */
+}
+
+.resume-card:hover {
+  box-shadow: 12px 12px 0 0 #000;
+  transform: translate(-4px, -4px);
+}
+
+.resume-header {
+  padding: 24px;
+  border-bottom: 4px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.resume-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.resume-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.resume-company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.resume-dates {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  border: 2px solid #000;
+  padding: 6px 12px;
+  background: #000;
+  color: #fff;
+}
+
+.resume-content {
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+}
+
+.resume-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-line;
+  flex: 1;
+}
+
+.resume-impact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 4px solid #000;
+  background: #f5f5f5;
+  padding: 20px;
+  flex-shrink: 0;
+  flex-basis: 45%;
+}
+
+.impact-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.impact-list {
+  margin: 0;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.impact-list li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .resume-header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .resume-dates {
+    align-self: flex-start;
+  }
+
+  .resume-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .resume-impact {
+    min-width: unset;
+  }
+
+  .resume-title {
+    font-size: 1.3rem;
+  }
+
+  .resume-company {
+    font-size: 1rem;
+  }
+
+  .resume-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* The wrapper handles horizontal movement and rotation */
+.particle-wrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 20; /* Must be higher than card */
+  width: var(--size);
+  height: var(--size);
+  /* Center the transform origin for nice rotation */
+  margin-left: calc(var(--size) / -2);
+  margin-top: calc(var(--size) / -2);
+  
+  /* Run X-axis, Rotation, and Fade animations concurrently */
+  animation: 
+    x-axis-motion 2s linear forwards, 
+    rotation-motion 2s linear forwards,
+    fade-out 2s ease-in forwards;
+}
+
+/* The inner box handles vertical movement (gravity) and color */
+.particle-box {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* This bezier curve simulates gravity: starts fast upwards, slows to a peak, accelerates downwards */
+    animation: y-axis-gravity 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Keyframe for Linear Horizontal Movement */
+@keyframes x-axis-motion {
+  to {
+    transform: translateX(var(--tx));
+  }
+}
+
+/* Keyframe for Gravity (Vertical Arcs) */
+@keyframes y-axis-gravity {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    /* Reaches the initial random "pop" height (usually negative/upwards) */
+    transform: translateY(var(--ty-init));
+    /* Optional: flatten the curve at the peak for more cartoonish hang-time */
+    /* animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1); */
+  }
+  100% {
+    /* Falls significantly downwards from the peak */
+    transform: translateY(calc(var(--ty-init) + 800px));
+  }
+}
+
+/* Keyframe for Rotation */
+@keyframes rotation-motion {
+    to {
+        rotate: var(--tr);
+    }
+}
+
+/* Keyframe so they don't disappear instantly */
+@keyframes fade-out {
+    0%, 60% { opacity: 1; } /* Stay visible for 60% of the time */
+    100% { opacity: 0; }
+}

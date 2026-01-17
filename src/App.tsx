@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation/Navigation.tsx';
 import Home from './pages/Home.tsx';
 import Projects from './pages/Projects.tsx';
+import Resume from './pages/Resume.tsx';
+import Contact from './pages/Contact.tsx';
 import { PageType } from './types';
 import './App.css';
 
@@ -34,11 +36,11 @@ function App() {
       case 'PROJECTS':
         return <Projects />;
       case 'RESUME':
-        return <h1>RESUME</h1>;
+        return <Resume />;
       case 'CONTACT':
-        return <h1>CONTACT</h1>;
+        return <Contact />
       default:
-        return <h1>HOME</h1>;
+        return <Home />;
     }
   };
 

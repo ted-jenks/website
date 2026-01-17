@@ -1,0 +1,43 @@
+- title: "Engineering Group Lead"
+  company: "Palantir"
+  dates: "Oct 2025 - Present"
+  description: |
+    Engineering Group Lead of the Data Plane group. Building the best data warehousing hub on the market with modernity, modularity, and interoperability at its core. Includes development of in-platform data warehousing features and integrations with other platforms.
+  keyImpact:
+    - "Oversee a group of ~20 engineers"
+    - "Heading up development of the Multi-Modal Data Plane, built for an AI age"
+
+- title: "Technical Lead"
+  company: "Palantir"
+  dates: "Jul 2024 - Oct 2025"
+  description: |
+    Lead of the Compute Engines team, responsible for the integration and operations of all compute engines in Foundry. Managed team priorities and roadmap while remaining hands-on as an individual contributor. Mentored engineers and invested in their growth and development.
+  keyImpact:
+    - "Led a team of 4 engineers"
+    - "Adopted and advocated for the use of single-node compute engines in platform, growing to 15% of all platform builds to date"
+    - "Leveled up stability posture, building a suite of diagnostic and incident response tooling"
+
+- title: "Software Engineer"
+  company: "Palantir"
+  dates: "Oct 2022 - Jul 2024"
+  description: |
+    Software engineer on the Spark team. Responsible for the integration of Apache Spark with Foundry and AIP. Worked on performance optimization, reliability improvements, and feature development across the Spark infrastructure.
+  keyImpact:
+    - "Developed and deployed a native acceleration offering for Spark, improving performance of jobs by 39%"
+    - "Maintained, modernized, and improved our long-lived Apache Spark deployment model on which 5,000,000 builds run every day"
+
+- title: "Master of Science, Computing"
+  company: "Imperial College London"
+  dates: "Oct 2021 - Sep 2022"
+  description: |
+    Masters degree in Computing covering databases, distributed systems, machine learning, and software engineering. Dissertation focused on digital identity systems.
+  keyImpact:
+    - "Distinction - 86"
+
+- title: "Bachelor of Science, Physics"
+  company: "Imperial College London"
+  dates: "Jan 2018 - Jul 2021"
+  description: |
+    Undergraduate degree in Physics covering quantum mechanics, statistical physics, electromagnetism, and experimental methods. Final year project on computational modeling of physical systems.
+  keyImpact:
+    - "First class honours - 74"

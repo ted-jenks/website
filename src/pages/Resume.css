@@ -1,0 +1,15 @@
+.resume-page {
+  width: 100%;
+}
+
+.resume-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .resume-list {
+    gap: 30px;
+  }
+}

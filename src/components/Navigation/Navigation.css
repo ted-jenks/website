@@ -23,6 +23,7 @@
 .nav-item.active {
   font-size: 2rem;
   padding: 10px 0;
+  letter-spacing: 0.1em;
 }
 
 .nav-item:not(.active):hover {
@@ -32,7 +33,6 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .navigation {
-
     flex-wrap: wrap;
     gap: 15px;
   }
