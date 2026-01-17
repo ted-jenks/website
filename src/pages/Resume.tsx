@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
 
   const loadResume = async () => {
     try {
-      const response = await fetch(`${process.env.PUBLIC_URL}/resume.json`);
+      const response = await fetch(`${process.env.PUBLIC_URL}/resume.yaml`);
       const text = await response.text();
       const data = yaml.load(text);
       
