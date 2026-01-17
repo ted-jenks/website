@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
 
   const loadProjects = async () => {
     try {
-      const response = await fetch('/projects.yaml');
+      const response = await fetch(`${process.env.PUBLIC_URL}/projects.yaml`);
       const text = await response.text();
       const data = yaml.load(text);
       
